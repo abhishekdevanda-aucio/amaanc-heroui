@@ -29,28 +29,28 @@ export default function ContactForm({ source = "contact_page" }: { source?: stri
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <TextField name="name" isRequired>
                     <Label>Full Name</Label>
-                    <Input placeholder="John Doe" isDisabled={isPending} />
+                    <Input placeholder="John Doe" disabled={isPending} />
                 </TextField>
                 <TextField name="email" type="email" isRequired>
                     <Label>Email Address</Label>
-                    <Input placeholder="john@company.com" isDisabled={isPending} />
+                    <Input placeholder="john@company.com" disabled={isPending} />
                 </TextField>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <TextField name="phone" type="tel">
                     <Label>Phone Number</Label>
-                    <Input placeholder="+1 (555) 000-0000" isDisabled={isPending} />
+                    <Input placeholder="+1 (555) 000-0000" disabled={isPending} />
                 </TextField>
                 <TextField name="company">
                     <Label>Company Name</Label>
-                    <Input placeholder="Acme Inc." isDisabled={isPending} />
+                    <Input placeholder="Acme Inc." disabled={isPending} />
                 </TextField>
             </div>
 
             <TextField name="message" isRequired>
                 <Label>How can we help?</Label>
-                <TextArea placeholder="Tell us about your project requirements..." minRows={4} isDisabled={isPending} />
+                <TextArea placeholder="Tell us about your project requirements..." rows={4} disabled={isPending} />
             </TextField>
 
             {state.message && !state.success && (
